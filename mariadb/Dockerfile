@@ -8,7 +8,7 @@ COPY ./tools/50-server.cnf /etc/mysql/mariadb.conf.d/
 
 
 COPY ./tools/script.sh /
+COPY ./tools/.env /.env
 
-RUN chmod +x /script.sh
+CMD ["/script.sh"]
 
-CMD ["mysqld_safe"]
