@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 #the image is build with debian
-FROM debian:buster
+FROM debian:bullseye
 
 #we need to download apt, install nginx and ssl(to have the TLS)
 RUN apt update && apt install -y nginx && apt install -y openssl
