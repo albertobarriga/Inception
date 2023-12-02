@@ -1,4 +1,16 @@
 #!/bin/bash
+
+DB_USER=abarriga
+DB_USER2=user2
+DB_PASSWORD="12345"
+DB_PASSWORD2="12345"
+DB_NAME=wordpress
+DB_HOST=mariadb
+DB_EMAIL=abarriga@studen.42malaga.com
+DB_EMAIL2=user2@studen.42malaga.com
+URL=abarriga.42.fr
+
+
 WP_CONFIG_FILE="/var/www/wordpress/wp-config.php"
 WP_CONFIG_SAMPLE="/var/www/wordpress/wp-config-sample.php"
 WP_CLI_URL="https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar"
@@ -30,4 +42,5 @@ else
 fi
 
 # Iniciar el servidor PHP-FPM (usando la ruta completa)
-/usr/sbin/php-fpm7.3 -y /etc/php/7.3/fpm/php-fpm.conf -F
+/usr/sbin/php-fpm7.4 -y /etc/php/7.3/fpm/php-fpm7.3 -F
+# /usr/sbin/php-fpm7.3 -y /etc/php/7.3/fpm/php-fpm.conf -F
