@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # a esperas de tener el docker compose y poder quitarlo de aquí
-DB_USER=abarriga
-DB_USER2=user2
-DB_PASSWORD="12345"
-DB_PASSWORD2="12345"
-DB_NAME=wordpress
-DB_HOST=mariadb
-DB_EMAIL=abarriga@studen.42malaga.com
-DB_EMAIL2=user2@studen.42malaga.com
-URL=abarriga.42.fr
+# DB_USER=abarriga
+# DB_USER2=user2
+# DB_PASSWORD="12345"
+# DB_PASSWORD2="12345"
+# DB_NAME=wordpress
+# DB_HOST=mariadb
+# DB_EMAIL=abarriga@studen.42malaga.com
+# DB_EMAIL2=user2@studen.42malaga.com
+# URL=abarriga.42.fr
 # inicia el servivio de mysql
 service mysql start 
 

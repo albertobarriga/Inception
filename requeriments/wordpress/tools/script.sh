@@ -42,5 +42,4 @@ else
 fi
 
 # Iniciar el servidor PHP-FPM (usando la ruta completa)
-/usr/sbin/php-fpm7.4 -y /etc/php/7.3/fpm/php-fpm7.3 -F
-# /usr/sbin/php-fpm7.3 -y /etc/php/7.3/fpm/php-fpm.conf -F
+/usr/sbin/php-fpm7.4 -y /etc/php/7.4/fpm/php-fpm7.4 -F
