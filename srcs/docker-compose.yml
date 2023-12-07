@@ -22,7 +22,7 @@ services:
     networks:
       - inception
     build: 
-      context: ./requeriments/mariaDB
+      context: ./requeriments/mariadb
     env_file: ./.env
     volumes:
       - mariadb:/var/lib/mysql
@@ -52,13 +52,13 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/home/abarriga/data/wordpress'
+      device: '/home/alberto/data/wordpress'
   mariadb:
     driver: local
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/home/abarriga/data/mariadb'
+      device: '/home/alberto/data/mariadb'
 
 networks:
   inception:

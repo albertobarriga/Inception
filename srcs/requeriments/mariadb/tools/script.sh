@@ -11,7 +11,16 @@
 # DB_EMAIL2=user2@studen.42malaga.com
 # URL=abarriga.42.fr
 # inicia el servivio de mysql
-service mysql start 
+
+service mariadb start 
+
+# service mysql start 
+
+# Espera a que el servidor MySQL esté disponible
+# until mysqladmin ping -h"$DB_HOST" --silent; do
+#   echo "Esperando a que el servidor MySQL esté disponible..."
+#   sleep 1
+# done
 
 mysql -e "FLUSH PRIVILEGES;"
 mysql -e "CREATE DATABASE IF NOT EXISTS $DB_NAME;"
@@ -20,4 +29,6 @@ mysql -e "GRANT ALL PRIVILEGES ON $DB_NAME.* TO $DB_USER IDENTIFIED BY '$DB_PASS
 mysql -e "ALTER USER '$DB_USER'@'%' IDENTIFIED BY '$DB_PASSWORD';"
 mysql -e "FLUSH PRIVILEGES;"
 
-mysqld_safe
+# mysqld_safe
+
+tail -f /dev/null

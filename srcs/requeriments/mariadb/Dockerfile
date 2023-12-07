@@ -10,5 +10,7 @@ COPY ./tools/50-server.cnf /etc/mysql/mariadb.conf.d/
 COPY ./tools/script.sh /
 COPY ./tools/.env /.env
 
+
+EXPOSE 3306
 CMD ["/script.sh"]
 
