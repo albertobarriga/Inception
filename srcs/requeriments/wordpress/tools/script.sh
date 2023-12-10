@@ -15,7 +15,9 @@ WP_CONFIG_FILE="/var/www/wordpress/wp-config.php"
 WP_CONFIG_SAMPLE="/var/www/wordpress/wp-config-sample.php"
 WP_CLI_URL="https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar"
 
-if [[ ! -f $WP_CONFIG_FILE ]]; then
+echo "SE EJECUTO EL SCRIPT"
+
+if ! [[ -f /var/www/wordpress/wp-config.php ]]; then
     # Descargar WP-CLI
     curl -o /usr/local/bin/wp $WP_CLI_URL
     chmod +x /usr/local/bin/wp
@@ -42,4 +44,4 @@ else
 fi
 
 # Iniciar el servidor PHP-FPM (usando la ruta completa)
-/usr/sbin/php-fpm7.4 -y /etc/php/7.4/fpm/php-fpm7.4 -F
+/usr/sbin/php-fpm7.4 -y /etc/php/7.4/fpm/php-fpm.conf -F
